@@ -1,21 +1,44 @@
+
 # Student Performance Analyzer
 
-A small data pipeline built with NumPy (no loops) that analyzes marks of 8 students across 3 subjects.
+A Python and NumPy project that analyzes student marks across Math, Science, and English.
 
-## What it does
-- Loads marks from `data/scores.csv` (one value is intentionally missing)
-- Fills missing values with the subject mean
-- Computes subject stats, student averages and z-scores (broadcasting)
-- Calculates weighted scores using matrix multiplication (`@`)
-- Filters students with average >= 75 and finds the top performer
-- Saves results to `results.csv`
+## Features
 
-## Run
-python numpy_analyzer.py
+- Loads numerical data from a CSV file using NumPy.
+- Calculates subject-wise and student-wise averages.
+- Calculates weighted scores using NumPy dot products.
+- Identifies high-performing students and the best-performing subject.
+- Detects missing values and fills them using subject averages.
+- Normalizes scores using z-score normalization and broadcasting.
+- Saves normalized results to a CSV file.
 
-## Concepts used
-NaN handling, `axis`, broadcasting, boolean masking, `argmax`, `column_stack`, `savetxt`
+## Technologies
 
-## Roadmap
-- [x] NumPy version
-- [ ] Pandas version (`pandas_analyzer.py`)
+- Python
+- NumPy
+- CSV
+
+## Dataset
+
+The input dataset contains 8 students and 3 subjects, with one intentionally missing mark.
+
+## How to Run
+
+1. Install NumPy:
+
+   ```bash
+   pip install numpy
+   ```
+
+2. Run the analyzer from the project folder:
+
+   ```bash
+   python numpy_analyzer.py
+   ```
+
+3. The program prints analysis results and generates a normalized CSV output file.
+
+## Concepts Practiced
+
+NumPy arrays, array properties, axis-based calculations, dot products, boolean masking, missing-value handling, broadcasting, and file input/output.
